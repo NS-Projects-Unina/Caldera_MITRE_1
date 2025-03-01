@@ -1,0 +1,31 @@
+- tactic: execution
+  technique_name: Input Capture
+  technique_id: T1056.001
+  name: 'Keylogger Execution '
+  description: Capture user keystrokes and save them into a local file.
+  executors:
+  - name: cmd
+    platform: windows
+    command: python .\keylogger.py
+    code: null
+    language: null
+    build_target: null
+    payloads:
+    - keylogger.py
+    uploads: []
+    timeout: 60
+    parsers: []
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements: []
+  privilege: ''
+  repeatable: false
+  buckets:
+  - execution
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: ''
+  delete_payload: false
+  id: 4b2f0c24-9ac9-472e-a8b5-7f88b3956d19
