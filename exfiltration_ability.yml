@@ -1,0 +1,30 @@
+- tactic: exfiltration
+  technique_name: Data from Local System
+  technique_id: T1048
+  name: Retrieve Keylog Data
+  description: Retrieve keylog file with stolen data
+  executors:
+  - name: psh
+    platform: windows
+    command: Get-Content C:\Users\Public\keylog.txt
+    code: null
+    language: null
+    build_target: null
+    payloads: []
+    uploads: []
+    timeout: 60
+    parsers: []
+    cleanup: []
+    variations: []
+    additional_info: {}
+  requirements: []
+  privilege: User
+  repeatable: false
+  buckets:
+  - exfiltration
+  additional_info: {}
+  access: {}
+  singleton: false
+  plugin: ''
+  delete_payload: false
+  id: a7c3f567-1e3c-4f89-b3a7-9e5764cfa9c1
